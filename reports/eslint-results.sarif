@@ -1,0 +1,126 @@
+{
+  "version": "2.1.0",
+  "$schema": "http://json.schemastore.org/sarif-2.1.0-rtm.5",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "ESLint",
+          "informationUri": "https://eslint.org",
+          "rules": [
+            {
+              "id": "no-undef",
+              "helpUri": "https://eslint.org/docs/latest/rules/no-undef",
+              "properties": {},
+              "shortDescription": {
+                "text": "Disallow the use of undeclared variables unless mentioned in `/*global */` comments"
+              }
+            }
+          ],
+          "version": "9.31.0"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///mnt/c/Users/imman/Github/SSD_Practice/eslint.config.mjs"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///mnt/c/Users/imman/Github/SSD_Practice/lab07-github-actions/src/server.js"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///mnt/c/Users/imman/Github/SSD_Practice/lab07-github-actions/tests/SeleniumTest.mjs"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///mnt/c/Users/imman/Github/SSD_Practice/lab07-github-actions/tests/test.js"
+          }
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "message": {
+            "text": "'process' is not defined."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///mnt/c/Users/imman/Github/SSD_Practice/lab07-github-actions/tests/SeleniumTest.mjs",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 21,
+                  "endLine": 5,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "ruleId": "no-undef",
+          "ruleIndex": 0
+        }
+      ],
+      "invocations": [
+        {
+          "toolConfigurationNotifications": [
+            {
+              "level": "error",
+              "message": {
+                "text": "Parsing error: 'import' and 'export' may appear only with 'sourceType: module'"
+              },
+              "locations": [
+                {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "file:///mnt/c/Users/imman/Github/SSD_Practice/lab07-github-actions/src/server.js",
+                      "index": 1
+                    },
+                    "region": {
+                      "startLine": 1,
+                      "startColumn": 1
+                    }
+                  }
+                }
+              ],
+              "descriptor": {
+                "id": "ESL0999"
+              }
+            },
+            {
+              "level": "error",
+              "message": {
+                "text": "Parsing error: 'import' and 'export' may appear only with 'sourceType: module'"
+              },
+              "locations": [
+                {
+                  "physicalLocation": {
+                    "artifactLocation": {
+                      "uri": "file:///mnt/c/Users/imman/Github/SSD_Practice/lab07-github-actions/tests/test.js",
+                      "index": 3
+                    },
+                    "region": {
+                      "startLine": 1,
+                      "startColumn": 1
+                    }
+                  }
+                }
+              ],
+              "descriptor": {
+                "id": "ESL0999"
+              }
+            }
+          ],
+          "executionSuccessful": false
+        }
+      ]
+    }
+  ]
+}
