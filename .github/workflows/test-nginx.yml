@@ -15,8 +15,7 @@ jobs:
 
       - name: Start Nginx with Docker
         run: |
-          docker run -d --name test-nginx -p 8080:80 -v ${{ github.workspace }}:/usr/share/nginx/html:ro nginx:latest
-
+          docker run -d --name test-nginx -p 8080:80 -v ${{ github.workspace }}/nginx-proxy:/usr/share/nginx/html:ro nginx:latest
 
       - name: Wait for Nginx to start
         run: sleep 5
@@ -26,6 +25,6 @@ jobs:
           curl -s -o response.html http://localhost:8080/index.html
           cat response.html
           grep "Hello World" response.html
-          
+
       - name: Stop Nginx container
         run: docker stop test-nginx
